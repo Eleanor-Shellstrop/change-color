@@ -1,0 +1,78 @@
+* {
+  font-family: 'Annie Use Your Telescope', cursive;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    box-shadow: inset 0px 0px 200px rgb(53, 68, 68);
+} 
+
+#button, 
+#ballButton {
+  border: 1px solid darkmagenta;
+  border-radius: 4%;
+  width: 300px;
+  height: 75px;
+  background: linear-gradient(to bottom, plum 5%, darkmagenta 100%);
+  background-color: plum;
+  box-shadow: 0px 10px 14px -7px darkmagenta;
+  font-size: 2rem;
+  font-weight: 600;
+  color: white;
+  text-shadow:0px 1px 0px black;
+  margin: 3% auto;
+}
+
+
+#ball {
+    width: 200px;
+    height: 200px;
+    margin-top: 30%;
+    border-radius: 50%;
+    background: radial-gradient(circle at 35% 35%, rgb(255, 255, 255) 0%, aquamarine 50%, teal 100%);
+    box-shadow: 50px 50px 100px rgb(105, 105, 105);
+    animation: move-ball 10s ease-out infinite;
+}
+
+#ball .text {
+  visibility: hidden;
+  transition-delay: 0.6s;
+  font-size: 1em;
+}
+
+
+@keyframes move-ball {
+    0% {
+      transform: scale(1);
+    }
+    20% {
+      transform: scaleY(0.95) scaleX(1.05);
+    }
+    48% {
+      transform: scaleY(1.1) scaleX(0.9) skewX(15deg) skewY(-10deg);
+    }
+    68% {
+        transform: scaleY(1.75) scaleX(2.0);
+      }
+    80% {
+      transform: scaleY(1.02) scaleX(0.98) skewX(-15deg) skewY(10deg);
+
+    }
+    97%, 100% {
+      transform: scale(1);
+    }
+
+  }
+
+  @media (min-width: 769px) {
+    #ball {
+      margin-top: 20%;
+    }
+    #ball:hover .text {
+      visibility: visible;
+    }
+  }
