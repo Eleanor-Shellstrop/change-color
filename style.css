@@ -76,3 +76,9 @@ main {
       visibility: visible;
     }
   }
+
+  @media(min-width: 1200px) {
+    #ball {
+      margin-top: 4%;
+    }
+  }
